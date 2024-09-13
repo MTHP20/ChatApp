@@ -26,7 +26,8 @@
                      DockPanel.Dock="Top" />
             <Button Height="25"
                     DockPanel.Dock="Top"
-                    Content="Connect" />
+                    Content="Connect"
+					Command="{Binding ConnectToServerCommand}"/>
             <ListView />
         </DockPanel>
 

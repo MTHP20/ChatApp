@@ -17,7 +17,7 @@ namespace ChatClient.MVVM.Core
             add { CommandManager.RequerySuggested += value; }
             remove { CommandManager.RequerySuggested -= value; }
         }
-
+        
         public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
             this.execute = execute;
@@ -26,7 +26,7 @@ namespace ChatClient.MVVM.Core
 
         public bool CanExecute(object parameter)
         {
-            return this.canExecute == null | this.canExecute(parameter);
+            return this.canExecute == null || this.canExecute(parameter);
         }
 
         public void Execute(object parameter)
