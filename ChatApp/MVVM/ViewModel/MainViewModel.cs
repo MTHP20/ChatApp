@@ -12,6 +12,8 @@ namespace ChatClient.MVVM.ViewModel
     {
         public RelayCommand ConnectToServerCommand {  get; set; }
 
+        public String Username { get; set; }
+
         private Server _server;
         public MainViewModel() 
         {
