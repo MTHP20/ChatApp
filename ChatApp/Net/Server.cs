@@ -30,7 +30,7 @@ namespace ChatClient.Net
                 {
                     var connectPacket = new PacketBuilder();
                     connectPacket.WriteOpCode(0);
-                    connectPacket.WriteString(username);
+                    connectPacket.WriteMessage(username);
                     _client.Client.Send(connectPacket.GetPacketBytes());
                 }
                 ReadPackets();
