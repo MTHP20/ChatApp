@@ -7,8 +7,8 @@
         xmlns:viewmodel="clr-namespace:ChatClient.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="450" 
-        Width="800">
+        Height="474" 
+        Width="816">
 
     <Window.DataContext>
         <viewmodel:MainViewModel />
@@ -44,10 +44,11 @@
             <StackPanel Orientation="Horizontal">
                 <TextBox Height="55"
                          Width="545"
-                         VerticalContentAlignment="Center"/>
+                         VerticalContentAlignment="Center"
+                         Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"/>
                 <Button Width="55"
-                        Content="Send"/>
-     
+                        Content="Send"
+                        Command="{Binding sendMessageCommand}"/>
             </StackPanel>
         </StackPanel>
     </Grid>
